@@ -1,3 +1,17 @@
+:root {
+    --header-color: #ffffff;
+    --main-title-color: #ffffff;
+    --second-title-color: #303030;
+    --main-btn-color: #ffffff;
+    --second-btn-color: #303030;
+    --accent-color: #ff6c00;
+    --socials-color: #303030;
+    --main-text-color: #9DA4BD;
+    --second-text-color: rgba(157, 164, 189, 0.6);
+    --third-text-color: #555555;
+    --fourth-text-color: #303030;
+  }
+
 .page {
     font-family: "Open Sans", Tahoma, sans-serif;
 }
@@ -25,4 +39,127 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-  } 
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    background-color: transparent;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.bottom-text {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.title {
+    font-family: "Raleway", Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.header {
+    background-color: grey;
+}
+
+.header-link,
+.header-tel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--header-color);
+}
+
+.header-link:hover,
+.header-tel:hover {
+    color: var(--accent-color);
+}
+
+.header-btn {
+    color: var(--main-btn-color);
+}
+
+.header-btn:hover {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+}
+
+.hero-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--socials-color);
+}
+
+.hero-link:hover {
+    color: var(--accent-color);
+}
+
+.hero-top-text {
+    color: var(--second-text-color);
+}
+
+.hero {
+    background-color: #303030;
+}
+
+.hero-title {
+    font-family: "Raleway", Tahoma, sans-serif;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+  
+    color: var(--main-title-color);
+}
+
+.hero-bottom-text {
+    color: var(--main-text-color);
+}
+
+.about-top-text {
+    color: var(--fourth-text-color);
+}
+
+.about-title {
+    color: var(--second-title-color);
+}
+
+.about-bottom-text {
+    color: var(--third-text-color);
+}
+
+.about-text {
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: var(--third-text-color);
+}
+
+.about-btn {
+    color: var(--second-btn-color);
+}
+
+.prices {
+    background-color: #303030;
+}
