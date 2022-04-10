@@ -10,6 +10,9 @@
     --second-text-color: rgba(157, 164, 189, 0.6);
     --third-text-color: #555555;
     --fourth-text-color: #303030;
+    --fifth-text-color: #ffffff;
+    --second-bg-color: #191C26;
+    --main-bg-color: #F7F7F7;
   }
 
 .page {
@@ -162,4 +165,135 @@
 
 .prices {
     background-color: #303030;
+}
+
+.prices-top-text {
+    color: var(--second-text-color);
+}
+
+.prices-title {
+    color: var(--main-title-color);
+}
+
+.prices-item-text {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+}
+
+.prices-btn {
+    color: var(--main-btn-color);
+}
+
+.reasons-item-count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--fourth-text-color);
+}
+
+.reasons-item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--fourth-text-color);
+}
+
+.reasons-top-text {
+    color: var(--fourth-text-color);
+}
+
+.reasons-title {
+    color: var(--second-title-color);
+}
+
+.reasons-bottom-text {
+    color: var(--third-text-color);
+}
+
+.masters {
+    background-color: var(--main-bg-color);
+}
+
+.masters-top-text {
+    color: var(--fourth-text-color);
+}
+
+.masters-title {
+    color: var(--second-title-color);
+}
+
+.masters-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--second-btn-color);
+}
+
+.masters-position {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}
+
+.portfolio-top-text {
+    color: var(--fourth-text-color);
+}
+
+.appointment,
+.contacts {
+    background-color: var(--second-bg-color);
+}
+
+.appointment-title {
+    color: var(--main-title-color);
+}
+
+.appointment-btn {
+    color: var(--main-btn-color);
+}
+
+.contacts-title {
+    color: var(--main-title-color);
+}
+
+.contacts-link,
+.contacts-text {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+}
+
+.contacts-top-text {
+    color: var(--fifth-text-color);
+}
+
+.footer {
+    background-color: var(--main-bg-color);
+}
+
+.footer-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--main-text-color);
+}
+
+.footer-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--socials-color);
 }
