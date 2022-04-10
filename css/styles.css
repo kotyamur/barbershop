@@ -13,10 +13,28 @@
     --fifth-text-color: #ffffff;
     --second-bg-color: #191C26;
     --main-bg-color: #F7F7F7;
-  }
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
 
 .page {
     font-family: "Open Sans", Tahoma, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .link {
@@ -29,6 +47,8 @@
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden {
@@ -45,6 +65,7 @@
 }
 
 .btn {
+    cursor: pointer;
     padding: 12px 20px;
     border: 1px solid var(--accent-color);
     border-radius: 25px;
@@ -80,8 +101,15 @@
     letter-spacing: 0.05em;
 }
 
+/* -------------------header------------------- */
+
 .header {
     background-color: grey;
+}
+
+.header-list {
+    display: flex;
+    gap: 40px;
 }
 
 .header-link,
@@ -107,6 +135,8 @@
     background-color: var(--accent-color);
 }
 
+/* -------------------hero------------------- */
+
 .hero-link {
     font-weight: 600;
     font-size: 11px;
@@ -128,6 +158,8 @@
 }
 
 .hero-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: "Raleway", Tahoma, sans-serif;
     font-size: 72px;
     line-height: 1.18;
@@ -140,15 +172,33 @@
     color: var(--main-text-color);
 }
 
+/* -------------------about------------------- */
+
+.about-box {
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+    gap: 30px;
+}
+
+.about-description {
+    padding-left: 64px;
+}
+
 .about-top-text {
+    margin-bottom: 20px;
     color: var(--fourth-text-color);
 }
 
 .about-title {
+    margin-bottom: 20px;
     color: var(--second-title-color);
 }
 
 .about-bottom-text {
+    margin-bottom: 20px;
     color: var(--third-text-color);
 }
 
@@ -160,19 +210,38 @@
 }
 
 .about-btn {
+    margin-top: 40px;
     color: var(--second-btn-color);
 }
+
+.about-btn:hover {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+}
+
+/* -------------------prices------------------- */
 
 .prices {
     background-color: #303030;
 }
 
 .prices-top-text {
+    margin-bottom: 20px;
     color: var(--second-text-color);
 }
 
 .prices-title {
+    margin-bottom: 44px;
     color: var(--main-title-color);
+}
+
+.prices-box {
+    display: flex;
+}
+
+.prices-list {
+    width: 585px;
+    padding: 30px 40px;
 }
 
 .prices-item-text {
@@ -183,10 +252,52 @@
 }
 
 .prices-btn {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
     color: var(--main-btn-color);
 }
 
+.prices-btn:hover {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+}
+
+/* -------------------reasons------------------- */
+
+.reasons-box {
+    display: flex;
+}
+
+.reasons-list {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.reasons-item {
+    max-width: 170px;
+    padding: 20px 21px;
+    background-color: var(--main-bg-color);
+    text-align: center;
+}
+
+.reasons-item:nth-child(2n + 1) {
+    margin-right: 30px;
+}
+
+.reasons-item:nth-child(-n + 2) {
+    margin-bottom: 30px;
+}
+
+.reasons-item:nth-child(2n) {
+    margin-top: 30px;
+}
+
 .reasons-item-count {
+    margin-bottom: 6px;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.36;
@@ -203,11 +314,17 @@
     color: var(--fourth-text-color);
 }
 
+.reasons-description {
+    padding-left: 30px;
+}
+
 .reasons-top-text {
+    margin-bottom: 20px;
     color: var(--fourth-text-color);
 }
 
 .reasons-title {
+    margin-bottom: 20px;
     color: var(--second-title-color);
 }
 
@@ -215,28 +332,40 @@
     color: var(--third-text-color);
 }
 
+/* -------------------masters------------------- */
+
 .masters {
     background-color: var(--main-bg-color);
 }
 
+.masters-list {
+    display: flex;
+    gap: 30px;
+}
+
 .masters-top-text {
+    margin-bottom: 20px;
     color: var(--fourth-text-color);
 }
 
 .masters-title {
+    margin-bottom: 44px;
     color: var(--second-title-color);
 }
 
 .masters-name {
+    margin-top: 30px;
+    margin-bottom: 8px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.39;
     text-align: center;
     letter-spacing: 0.02em;
-    color: var(--second-btn-color);
+    color: #303030;
 }
 
 .masters-position {
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.36;
     text-align: center;
@@ -244,13 +373,26 @@
     color: var(--accent-color);
 }
 
+/* -------------------portfolio------------------- */
+
+.portfolio-list {
+    display: flex;
+    gap: 30px;
+}
+
 .portfolio-top-text {
+    margin-bottom: 44px;
     color: var(--fourth-text-color);
 }
 
-.appointment,
-.contacts {
+/* -------------------prefooter------------------- */
+
+.prefooter {
     background-color: var(--second-bg-color);
+}
+
+.prefooter-box {
+    display: flex;
 }
 
 .appointment-title {
@@ -258,10 +400,22 @@
 }
 
 .appointment-btn {
+    padding: 12px 38px;
     color: var(--main-btn-color);
 }
 
+.appointment-btn:hover {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+}
+
+.contacts {
+    max-width: 625px;
+    padding-left: 100px;
+}
+
 .contacts-title {
+    margin-bottom: 40px;
     color: var(--main-title-color);
 }
 
@@ -275,11 +429,25 @@
 }
 
 .contacts-top-text {
+    margin-bottom: 20px;
     color: var(--fifth-text-color);
 }
 
+.contacts-link-underline {
+    text-decoration: underline;
+}
+
+/* -------------------footer------------------- */
+
 .footer {
     background-color: var(--main-bg-color);
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-text {
@@ -290,10 +458,19 @@
     color: var(--main-text-color);
 }
 
+.footer-list {
+    display: flex;
+    gap: 40px;
+}
+
 .footer-link {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.2em;
     color: var(--socials-color);
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
 }
