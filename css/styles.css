@@ -44,6 +44,8 @@ p {
 
 .image {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .list {
@@ -68,7 +70,6 @@ p {
 .btn {
     min-width: 160px;
     height: 40px;
-    /* padding: 12px 20px; */
     cursor: pointer;
     border: 1px solid var(--accent-color);
     border-radius: 25px;
@@ -123,7 +124,6 @@ p {
 
 .header-list {
     display: flex;
-    /* gap: 40px; */
 }
 
 .header-item:not(:last-child) {
@@ -142,10 +142,6 @@ p {
     letter-spacing: 0.1em;
     color: var(--header-color);
 }
-
-/* .header-tel {
-    margin-left: auto;
-} */
 
 .header-link:hover,
 .header-tel:hover {
@@ -168,9 +164,9 @@ p {
     background-color: #303030;
 }
 
-/* .hero-box {
-
-} */
+.hero-box {
+    display: flex;
+}
 
 .hero-list {
     /* display: flex;
@@ -234,7 +230,7 @@ p {
 
 .about-list {
     display: flex;
-    /* gap: 30px; */
+    margin-right: 64px;
 }
 
 .about-item + .about-item {
@@ -242,7 +238,7 @@ p {
 }
 
 .about-description {
-    padding-left: 64px;
+    max-width: 475px;
 }
 
 .about-top-text {
@@ -261,7 +257,7 @@ p {
 }
 
 .about-text {
-    max-width: 500px;
+    margin-bottom: 40px;
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
@@ -269,7 +265,6 @@ p {
 }
 
 .about-btn {
-    margin-top: 40px;
     color: var(--second-btn-color);
 }
 
@@ -296,11 +291,11 @@ p {
 
 .prices-box {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .prices-list {
     padding: 30px 40px;
-    /* width: 50%; */
     flex-grow: 1;
 }
 
@@ -323,7 +318,6 @@ p {
 .prices-btn {
     display: block;
     margin: auto;
-    margin-top: 50px;
     color: var(--main-btn-color);
 }
 
@@ -409,7 +403,7 @@ p {
 .masters-list {
     display: flex;
     margin-left: -30px;
-    /* gap: 30px; */
+    flex-wrap: wrap;
 }
 
 .masters-item {
@@ -469,8 +463,17 @@ p {
 
 .portfolio-list {
     display: flex;
+    flex-wrap: wrap;
+    /* margin-left: -30px;
+    margin-bottom: -30px; */
     gap: 30px;
 }
+
+/* .gallery-item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+} */
 
 .portfolio-top-text {
     margin-bottom: 44px;
