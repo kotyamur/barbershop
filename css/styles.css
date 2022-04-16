@@ -169,8 +169,8 @@ p {
 }
 
 .hero-list {
-    /* display: flex;
-    gap: 40px; */
+    display: flex;
+    gap: 40px;
     width: 93px;
     padding-top: 27px;
     padding-bottom: 27px;
@@ -191,10 +191,11 @@ p {
 }
 
 .hero-list::before {
+    display: inline-flex;
     content: "";
     height: 1px;
     width: 60px;
-    background-color: var(--socials-color);
+    background-color: rgb(68, 255, 0);
     align-self: center;
 }
 
@@ -204,6 +205,16 @@ p {
 
 .hero-top-text {
     color: var(--second-text-color);
+}
+
+.hero-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--second-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
 }
 
 .hero-title {
@@ -246,6 +257,16 @@ p {
     color: var(--fourth-text-color);
 }
 
+.about-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--fourth-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
 .about-title {
     margin-bottom: var(--typical-margin);
     color: var(--second-title-color);
@@ -284,6 +305,16 @@ p {
     color: var(--second-text-color);
 }
 
+.prices-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--second-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
 .prices-title {
     margin-bottom: 44px;
     color: var(--main-title-color);
@@ -297,6 +328,18 @@ p {
 .prices-list {
     padding: 30px 40px;
     flex-grow: 1;
+}
+
+.prices-list:first-child {
+    background: linear-gradient(180deg, 
+    #171A24 0%, 
+    rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list:nth-child(2) {
+    background: linear-gradient(180deg, 
+    #090B13 0%, 
+    rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-item {
@@ -366,6 +409,19 @@ p {
     color: var(--fourth-text-color);
 }
 
+.reasons-item-count::after {
+    content: "";
+    display: inline-flex;
+    background-image: url(../images/+.svg);
+    width: 9px;
+    height: 18px;
+    fill: #FF6C00;
+    margin-left: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: super;
+}
+
 .reasons-item-text {
     font-weight: 600;
     font-size: 11px;
@@ -382,6 +438,16 @@ p {
 .reasons-top-text {
     margin-bottom: var(--typical-margin);
     color: var(--fourth-text-color);
+}
+
+.reasons-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--fourth-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
 }
 
 .reasons-title {
@@ -421,6 +487,16 @@ p {
     color: var(--fourth-text-color);
 }
 
+.masters-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--fourth-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
 .masters-title {
     margin-bottom: 44px;
     color: var(--second-title-color);
@@ -446,6 +522,9 @@ p {
     color: var(--accent-color);
 }
 
+/* aria-hidden="true"  */
+/* style="position:absolute;width:0;height:0;overflow:hidden"  */
+
 .masters-socials-list {
     display: flex;
     gap: 10px;
@@ -453,10 +532,27 @@ p {
 }
 
 .masters-socials-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: #ffffff;
+}
+
+.masters-socials-link {
+    display: inline-flex;
+}
+
+.masters-socials-icon {
+    width: 20px;
+    height: 20px;
+    fill: #303030;
+}
+
+.masters-socials-icon:hover {
+    fill: #ff6c00;
 }
 
 /* -------------------portfolio------------------- */
@@ -478,6 +574,16 @@ p {
 .portfolio-top-text {
     margin-bottom: 44px;
     color: var(--fourth-text-color);
+}
+
+.portfolio-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--fourth-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
 }
 
 /* -------------------prefooter------------------- */
@@ -536,9 +642,27 @@ p {
     color: var(--main-text-color);
 }
 
+.contacts-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
 .contacts-top-text {
     margin-bottom: var(--typical-margin);
     color: var(--fifth-text-color);
+}
+
+.contacts-top-text::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--fifth-text-color);
+    vertical-align: middle;
+    margin-right: 20px;
 }
 
 .contacts-link-underline {
@@ -569,6 +693,15 @@ p {
 .footer-list {
     display: flex;
     gap: 40px;
+}
+
+.footer-list::before {
+    display: inline-flex;
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--socials-color);
+    align-self: center;
 }
 
 .footer-link {
