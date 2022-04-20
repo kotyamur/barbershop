@@ -603,6 +603,9 @@ p {
     max-width: 1280px;
     margin: 0 auto;
     background-color: var(--second-bg-color);
+    background-image: url(../images/contactsBg.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .prefooter-box {
