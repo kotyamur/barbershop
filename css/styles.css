@@ -89,7 +89,17 @@ p {
     line-height: 1.36;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
+
+.top-text::before {
+    content: "";
+    width: 63px;
+    height: 1px;
+    background-color: currentColor;
+    margin-right: 20px;
+  }
 
 .bottom-text {
     font-size: 18px;
@@ -172,12 +182,34 @@ p {
 }
 
 .hero-list {
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 40px;
     width: 93px;
     padding-top: 27px;
     padding-bottom: 27px;
-    background-color: #9DA4BD;
+
+    transform: rotate(-90deg);
+}
+
+.hero-list::before {
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: var(--socials-color);
+}
+
+.hero-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--socials-color);
+}
+
+.hero-link:hover {
+    color: var(--accent-color);
 }
 
 .hero-content {
@@ -191,43 +223,12 @@ p {
         url(../images/Slider\ img\ 3.jpg);
 }
 
-.hero-link {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-    color: var(--socials-color);
-}
-
-.hero-list::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: rgb(68, 255, 0);
-    align-self: center;
-}
-
-.hero-link:hover {
-    color: var(--accent-color);
-}
-
 .hero-top-text {
     color: var(--second-text-color);
-}
-
-.hero-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--second-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .hero-title {
-    margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Raleway", Tahoma, sans-serif;
     font-size: 72px;
@@ -265,16 +266,6 @@ p {
 .about-top-text {
     margin-bottom: var(--typical-margin);
     color: var(--fourth-text-color);
-}
-
-.about-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--fourth-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
 }
 
 .about-title {
@@ -321,16 +312,6 @@ p {
     color: var(--second-text-color);
 }
 
-.prices-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--second-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
 .prices-title {
     margin-bottom: 44px;
     color: var(--main-title-color);
@@ -361,10 +342,20 @@ p {
 .prices-item {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .prices-item:not(:last-child) {
     margin-bottom: var(--typical-margin);
+}
+
+.prices-item::after {
+    content: "";
+    background-color: rgba(157, 164, 189, 0.12);
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .prices-item-text {
@@ -372,6 +363,10 @@ p {
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+}
+
+.prices-item-text:last-child {
+    order: 1;
 }
 
 .prices-btn {
@@ -456,16 +451,6 @@ p {
     color: var(--fourth-text-color);
 }
 
-.reasons-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--fourth-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
 .reasons-title {
     margin-bottom: var(--typical-margin);
     color: var(--second-title-color);
@@ -484,6 +469,16 @@ p {
     background-color: var(--main-bg-color);
 }
 
+.masters-top-text {
+    margin-bottom: var(--typical-margin);
+    color: var(--fourth-text-color);
+}
+
+.masters-title {
+    margin-bottom: 44px;
+    color: var(--second-title-color);
+}
+
 .masters-list {
     display: flex;
     margin-left: -30px;
@@ -499,26 +494,6 @@ p {
 /* .masters-item:not(:last-child) {
     margin-right: 30px;
 } */
-
-.masters-top-text {
-    margin-bottom: var(--typical-margin);
-    color: var(--fourth-text-color);
-}
-
-.masters-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--fourth-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
-.masters-title {
-    margin-bottom: 44px;
-    color: var(--second-title-color);
-}
 
 .masters-name {
     margin-top: 30px;
@@ -546,6 +521,10 @@ p {
     justify-content: center;
 }
 
+/* .masters-soc-item + .masters-soc-item {
+    margin-left: 10px;
+} */
+
 .masters-socials-link {
     display: flex;
     justify-content: center;
@@ -555,7 +534,12 @@ p {
     border-radius: 50%;
     background-color: #ffffff;
     fill: #303030;
+    /* color: #303030; */
 }
+
+/* .masters-soc-icon {
+  fill: currentColor;
+} */
 
 .masters-socials-icon {
     width: 20px;
@@ -564,9 +548,19 @@ p {
 
 .masters-socials-link:hover {
     fill: #ff6c00;
+    /* color: #FF6C00; */
 }
 
+/* .masters-soc-link:hover .masters-soc-icon {
+    fill: #FF6C00;
+} */
+
 /* -------------------portfolio------------------- */
+
+.portfolio-top-text {
+    margin-bottom: 44px;
+    color: var(--fourth-text-color);
+}
 
 .portfolio-list {
     display: flex;
@@ -582,20 +576,6 @@ p {
     margin-bottom: 30px;
 } */
 
-.portfolio-top-text {
-    margin-bottom: 44px;
-    color: var(--fourth-text-color);
-}
-
-.portfolio-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--fourth-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
-}
 
 /* -------------------prefooter------------------- */
 
@@ -606,6 +586,7 @@ p {
     background-image: url(../images/contactsBg.png);
     background-repeat: no-repeat;
     background-position: right;
+    background-size: calc(50% - 15px);
 }
 
 .prefooter-box {
@@ -613,7 +594,8 @@ p {
 }
 
 .appointment {
-    width: calc(50% + 15px); 
+    /* width: calc(50% + 15px); */
+    flex-grow: 1; 
 }
 
 .appointment-title {
@@ -671,16 +653,6 @@ p {
     color: var(--fifth-text-color);
 }
 
-.contacts-top-text::before {
-    display: inline-flex;
-    content: "";
-    height: 1px;
-    width: 60px;
-    background-color: var(--fifth-text-color);
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
 .contacts-link-underline {
     text-decoration: underline;
 }
@@ -710,16 +682,15 @@ p {
 
 .footer-list {
     display: flex;
+    align-items: center;
     gap: 40px;
 }
 
 .footer-list::before {
-    display: inline-flex;
     content: "";
     height: 1px;
     width: 60px;
     background-color: var(--socials-color);
-    align-self: center;
 }
 
 .footer-link {
