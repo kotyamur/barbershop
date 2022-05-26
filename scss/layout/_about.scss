@@ -1,49 +1,70 @@
-.about__box {
-    display: flex;
-}
-
-.about__list {
-    display: flex;
-    margin-right: 64px;
-    flex-shrink: 0;
+.about {
+    &__box {
+        display: flex;
+    }
+    &__list {
+        @include media(767px) {
+            display: none;
+        }
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        flex-shrink: 0;
+        @include desktop {
+            flex-direction: row;
+            margin-right: 64px;
+            flex-shrink: 0;
+        }
+    }
+    &__description {
+        max-width: 418px;
+        @include tablet {
+            max-width: 330px;
+        }
+        @include desktop {
+            max-width: 475px;
+        }
+    }
+    &__top-text {
+        margin-bottom: var(--typical-margin);
+        color: var(--fourth-text-color);
+    }
+    &__title {
+        margin-bottom: var(--typical-margin);
+        color: var(--second-title-color);
+        @include media(1199px) {
+            font-size: 28px;
+        }
+    }
+    &__bottom-text {
+        margin-bottom: var(--typical-margin);
+        color: var(--third-text-color);
+        @include media(1199px) {
+            font-size: 16px;
+            line-height: 1.62;
+        }
+    }
+    &__text {
+        margin-bottom: 40px;
+        font-size: 14px;
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+        color: var(--third-text-color);
+    }
 }
 
 .about__item + .about__item {
-    margin-left: 30px;
-}
-
-.about__description {
-    max-width: 475px;
-}
-
-.about__top-text {
-    margin-bottom: var(--typical-margin);
-    color: var(--fourth-text-color);
-}
-
-.about__title {
-    margin-bottom: var(--typical-margin);
-    color: var(--second-title-color);
-}
-
-.about__bottom-text {
-    margin-bottom: var(--typical-margin);
-    color: var(--third-text-color);
-}
-
-.about__text {
-    margin-bottom: 40px;
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.02em;
-    color: var(--third-text-color);
+    margin-top: 30px;
+    @include desktop {
+        margin-top: 0;
+        margin-left: 30px;
+    }
 }
 
 .about__btn {
     color: var(--second-btn-color);
-}
-
-.about__btn:hover {
-    color: var(--main-btn-color);
-    background-color: var(--accent-color);
+    &:hover {
+        color: var(--main-btn-color);
+        background-color: var(--accent-color);
+    }
 }
