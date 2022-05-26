@@ -2,11 +2,11 @@
     display: flex;
     gap: 10px;
     justify-content: center;
-}
 
-/* .socials-list__item + .socials-list__item {
-    margin-left: 10px;
-} */
+    // &__item + &__item {
+    //     margin-left: 10px;
+    // }
+}
 
 .socials-list__link {
     display: flex;
@@ -17,23 +17,19 @@
     border-radius: 50%;
     background-color: #ffffff;
     fill: #303030;
-    /* color: #303030; */
-}
+    // color: #303030;
 
-/* .socials-list__icon {
-  fill: currentColor;
-} */
+    &:hover {
+        fill: #ff6c00;
+        // color: #FF6C00;
+    }
+}
 
 .socials-list__icon {
     width: 20px;
     height: 20px;
+    // fill: currentColor;
+    // .socials-list__link:hover & {
+    //     fill: #FF6C00;
+    // }
 }
-
-.socials-list__link:hover {
-    fill: #ff6c00;
-    /* color: #FF6C00; */
-}
-
-/* .socials-list__link:hover .socials-list__icon {
-    fill: #FF6C00;
-} */

@@ -6,12 +6,11 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-}
-
-.top-text::before {
-    content: "";
-    width: 63px;
-    height: 1px;
-    background-color: currentColor;
-    margin-right: 20px;
+    &::before {
+        content: "";
+        width: 63px;
+        height: 1px;
+        background-color: currentColor;
+        margin-right: 20px;
+    }
 }
