@@ -1,44 +1,59 @@
 .contacts {
-    width: calc(50% - 15px);
-    padding-left: 100px;
-}
-
-.contacts__title {
-    margin-bottom: 40px;
-    color: var(--main-title-color);
-}
-
-.contacts__list {
-    max-width: 270px;
-    margin-bottom: 70px;
-}
-
-.contacts__item:not(:last-child) {
-    margin-bottom: var(--typical-margin);
-}
-
-.contacts__link,
-.contacts__text {
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-    color: var(--main-text-color);
-}
-
-.contacts__icon {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    margin-right: 16px;
-    vertical-align: middle;
-}
-
-.contacts__top-text {
-    margin-bottom: var(--typical-margin);
-    color: var(--fifth-text-color);
-}
-
-.contacts__link--underline {
-    text-decoration: underline;
+    @include desktop {
+        width: calc(50% - 15px);
+        padding-left: 100px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        color: var(--main-title-color);
+        @include media(767px) {
+            text-align: center;
+        }
+    }
+    &__box {
+        @media screen and (min-width: 768px) and (max-width: 1199px){
+           display: flex; 
+           justify-content: space-between;
+        }
+    }
+    &__list {
+        max-width: 270px;
+        @include media(767px) {
+            margin-bottom: 44px;
+            max-width: 418px;
+        }
+        @include desktop {
+            margin-bottom: 70px;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-bottom: var(--typical-margin);
+    }
+    &__link,
+    &__text {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+        color: var(--main-text-color);
+    }
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        margin-right: 16px;
+        vertical-align: middle;
+    }
+    &__text-box {
+        @include tablet {
+            min-width: 330px;
+        }
+    }
+    &__top-text {
+        margin-bottom: var(--typical-margin);
+        color: var(--fifth-text-color);
+    }
+    &__link--underline {
+        text-decoration: underline;
+    }
 }

@@ -1,28 +1,45 @@
 .appointment {
     /* width: calc(50% + 15px); */
-    flex-grow: 1; 
-    padding-right: 40px;
-}
-
-.appointment__title {
-    color: var(--main-title-color);
-    margin-bottom: 44px;
-}
-
-.appointment__form {
-    margin-bottom: 44px;
-}
-
-.appointment__inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 44px;
-}
-
-.appointment__field {
-    position: relative;
-    width: 265px;
-    height: 24px;
+    @include desktop {
+        flex-grow: 1; 
+        padding-right: 40px;
+    }
+    &__title {
+        color: var(--main-title-color);
+        margin-bottom: 44px;
+        @include media(767px) {
+            text-align: center;
+        }
+    }
+    &__form {
+        margin-bottom: 44px;
+    }
+    &__inputs {
+        margin-bottom: 44px;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__field {
+        position: relative;
+        width: 100%;
+        height: 24px;
+        margin-bottom: 44px;
+        @include mobile {
+            width: 418px;
+        }
+        @include tablet {
+            width: 330px;
+        }
+        @include desktop {
+            width: 265px;
+        }
+    }
+    &__message {
+        position: relative;
+        height: 76px;
+    }
 }
 
 .appointment__input {
@@ -35,6 +52,9 @@
     color: var(--fifth-text-color);
 
     transition: border-color 300ms;
+    &:focus {
+        border-color: #ffffff;
+    }
 }
 
 .appointment__label {
@@ -50,25 +70,24 @@
     color: rgba(157, 164, 189, 0.4);
 
     transition: transform 300ms, color 300ms;
-}
 
-.appointment__input:focus {
-    border-color: #ffffff;
-}
-
-.appointment__input:focus + .appointment__label{
-    color: #ffffff;
-    transform: translateY(-120%);
-}
-
-.appointment__input:not(:placeholder-shown) + .appointment__label{
-    color: #ffffff;
-    transform: translateY(-120%);
-}
-
-.appointment__message {
-    position: relative;
-    height: 76px;
+    .appointment__input:focus + & {
+        color: #ffffff;
+        transform: translateY(-120%);
+    }
+    .appointment__input:not(:placeholder-shown) + & {
+        color: #ffffff;
+        transform: translateY(-120%);
+    }
+    .appointment__text:focus + & {
+        color: #ffffff;
+        transform: translateY(-120%);
+    }
+    
+    .appointment__text:not(:placeholder-shown) + & {
+        color: #ffffff;
+        transform: translateY(-120%);
+    }
 }
 
 .appointment__text {
@@ -82,28 +101,21 @@
     color: var(--fifth-text-color);
 
     transition: border-color 300ms;
-}
 
-.appointment__text:focus {
-    border-color: #ffffff;
-}
-
-.appointment__text:focus + .appointment__label{
-    color: #ffffff;
-    transform: translateY(-120%);
-}
-
-.appointment__text:not(:placeholder-shown) + .appointment__label{
-    color: #ffffff;
-    transform: translateY(-120%);
+    &:focus {
+        border-color: #ffffff;
+    }
 }
 
 .appointment__btn {
     /* padding: 12px 38px; */
     color: var(--main-btn-color);
-}
-
-.appointment__btn:hover {
-    color: var(--main-btn-color);
-    background-color: var(--accent-color);
+    @include media(767px) {
+        margin: 0 auto;
+        display: block;
+    }
+    &:hover {
+        color: var(--main-btn-color);
+        background-color: var(--accent-color);
+    }
 }

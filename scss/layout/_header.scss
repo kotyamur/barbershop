@@ -4,28 +4,55 @@
 
     padding-bottom: 32px;
     padding-top: 32px;
-}
 
-.header__box {
-    display: flex;
-    align-items: center;
-}
-
-.header__logo {
-    margin-right: 70px;
-}
-
-.header__list {
-    display: flex;
-}
-
-.header__item:not(:last-child) {
-    margin-right: 40px;
-}
-
-.header__conect {
-    margin-left: auto;
-    margin-right: 4px;
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    &__nav {
+        @include media(767px) {
+            display: none;
+        }
+    }
+    &__logo {
+        margin-right: 51px;
+        @include media(767px) {
+           fill: #FFFFFF;
+        }
+        @include tablet {
+            fill: #303030;
+        }
+        @include desktop {
+            margin-right: 70px;
+        }
+    }
+    &__list {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        margin-right: 24px;
+        @include desktop {
+            margin-right: 40px;
+        }
+    }
+    &__conect {
+        margin-left: auto;
+        margin-right: 4px;
+        @include media(767px) {
+            display: none;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+           display: flex; 
+           flex-direction: column-reverse;
+           gap: 20px;
+           align-items: center;
+        }
+        @include desktop {
+            display: flex; 
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 }
 
 .header__link,
@@ -44,10 +71,146 @@
 
 .header__btn {
     color: var(--main-btn-color);
-    margin-left: 60px;
+    @include desktop {
+        margin-left: 60px;
+    }
+    &:hover {
+        color: var(--main-btn-color);
+        background-color: var(--accent-color);
+    }
 }
 
-.header__btn:hover {
-    color: var(--main-btn-color);
-    background-color: var(--accent-color);
+.menu-open-btn,
+.menu-close-btn {
+    margin-left: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: var(--header-color);
+    @include tablet {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu-close-btn {
+    // position: absolute;
+    // top: 48px;
+    // right: 31px;
+    margin-bottom: 30px;
+    color: #303030;;
+}
+
+.menu-mob {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(25, 28, 38, 0.2);;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 133px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity var(--typical-transition-duration) var(--typical-transition-timing-function), 
+        visibility var(--typical-transition-duration) var(--typical-transition-timing-function);
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+    }
+
+
+    @include media(430px) {
+        padding-left: 0;
+    }
+    @include tablet {
+        display: none;
+    }
+    &__container {
+        background-color: #fff;
+        height: 100%;
+        padding: 48px 31px 118px 50px;
+    }
+    &__nav {
+        margin-bottom: 64px;
+    }
+    &__conect {
+        margin-bottom: 64px;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.menu-mob__link,
+.menu-mob__tel {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1,38;
+    letter-spacing: 0.1em;
+    color: var(-fourth-text-color);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu-mob__tel {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.menu-mob__social-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1,36;
+    letter-spacing: 0.2em;
+    color: var(--socials-color);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu-mob__social-list {
+    position: relative;
+    padding-left: 100px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        background-color: #303030;
+        left: 0;
+        top: 10px;
+    }
+}
+
+.menu-mob__btn {
+    width: 194px;
+    &:hover {
+        color: var(--main-btn-color);
+        background-color: var(--accent-color);
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
 }

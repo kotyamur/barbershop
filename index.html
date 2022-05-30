@@ -16,8 +16,16 @@
     <header class="header">
         <div class="container header__box">
             <a href="" class="header__logo">
-                <img src="./images/Logo.svg" alt="лого сайта">
+                <svg class="logo__icon" width="66" height="55">
+                    <use href="./images/barbicons.svg#icon-logo"></use>
+                </svg>
             </a>
+            <button class="menu-open-btn" 
+            aria-controls="mobile-menu">
+                <svg fill="currentColor" width="40" height="40">
+                    <use href="./images/barbicons.svg#icon-menu_burger"></use>
+                </svg>
+            </button>
             <nav class="header__nav">
                 <ul class="header__list list">
                     <li class="header__item"><a href="#about-us" class="header__link link">О нас</a></li>
@@ -28,9 +36,32 @@
             </nav>
             <div class="header__conect">
                 <a class="header__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-                <button type="button" class="header__btn btn">
-                    <a href="#call" class="link">онлайн-запись</a>
+                <a href="#call" class="link header__btn btn">онлайн-запись</a>
+            </div>
+        </div>
+        <div class="menu-mob" id="mobile-menu">
+            <div class="menu-mob__container menu-link">
+                <button class="menu-close-btn">
+                    <svg fill="currentColor" width="40" height="40">
+                        <use href="./images/barbicons.svg#icon-close-mob-menu"></use>
+                    </svg>
                 </button>
+                <nav class="menu-mob__nav">
+                    <ul class="menu-mob__list list">
+                        <li class="menu-mob__item"><a href="#about-us" class="menu-mob__link link">О нас</a></li>
+                        <li class="menu-mob__item"><a href="#prices" class="menu-mob__link link">Услуги и цены</a></li>
+                        <li class="menu-mob__item"><a href="#masters" class="menu-mob__link link">Мастера</a></li>
+                        <li class="menu-mob__item"><a href="#contacts" class="menu-mob__link link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-mob__conect">
+                    <a class="menu-mob__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+                    <a href="#call" class="link menu-mob__btn btn">онлайн-запись</a>
+                </div>
+                <ul class="menu-mob__social-list list">
+                    <li class="menu-mob__item"><a href="" class="menu-mob__social-link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></li>
+                    <li class="menu-mob__item"><a href="" class="menu-mob__social-link link" target="_blank" rel="noopener noreferrer nofollow">Youtube</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -63,9 +94,7 @@
                     <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом 
                         и жаждет перемен. И когда ты попадешь в руки нашего мастера, 
                         то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
-                    <button type="button" class="about__btn btn">
-                        <a href="#call" class="link">онлайн-запись</a>
-                    </button>
+                    <a href="#call" class="link about__btn btn">онлайн-запись</a>
                 </div>
             </div>
         </section>
@@ -112,9 +141,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="prices__btn btn">
-                    <a href="#call" class="link">онлайн-запись</a>
-                </button>
+                <a href="#call" class="link prices__btn btn">онлайн-запись</a>
             </div>
         </section>
 
@@ -283,9 +310,9 @@
 
         <div class="prefooter">
             <div class="container prefooter__box">
-                <section class="appointment section">
+                <section class="appointment section" id="call">
                     <h2 class="appointment__title title">Онлайн-запись</h2>
-                    <form class="appointment__form" id="call">
+                    <form class="appointment__form">
                         <div class="appointment__inputs">
                             <div class="appointment__field">
                                 <input type="text" id="user-name" name="user-name" class="appointment__input" placeholder=" ">
@@ -301,41 +328,45 @@
                             <label for="user-massage" class="appointment__label">сообщение</label>
                         </div>
                     </form>
-                    <button type="button" class="appointment__btn btn">отправить</button>
+                    <button type="submit" class="appointment__btn btn">отправить</button>
                 </section>
         
                 <section class="contacts section" id="contacts">
                     <h2 class="contacts__title title">Контакты</h2>
-                    <address>
-                        <ul class="contacts__list list">
-                            <li class="contacts__item">
-                                <a href="https://goo.gl/maps/11NMfkr7Hcq5y3P89" class="contacts__link link" rel="noopener noindex nofollow">
-                                    <svg class="contacts__icon">
-                                        <use href="./images/barbicons.svg#icon-map-pin"></use>
-                                    </svg>
-                                    ул. Васильковая, 7А Киев, 08132
-                                </a>
-                            </li>
-                            <li class="contacts__item">
-                                <a href="tel:+380441111111" class="contacts__link link">
-                                    <svg class="contacts__icon">
-                                        <use href="./images/barbicons.svg#icon-phone"></use>
-                                    </svg>
-                                    +38 044 111 11 11
-                                </a>
-                            </li>
-                            <li class="contacts__item">
-                                <a href="mailto:barbershop@email.com" class="contacts__link--underline contacts__link link">
-                                    <svg class="contacts__icon">
-                                        <use href="./images/barbicons.svg#icon-mail"></use>
-                                    </svg>
-                                    barbershop@email.com
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
-                    <p class="contacts__top-text top-text">время работы</p>
-                    <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
+                    <div class="contacts__box">
+                        <address>
+                            <ul class="contacts__list list">
+                                <li class="contacts__item">
+                                    <a href="https://goo.gl/maps/11NMfkr7Hcq5y3P89" class="contacts__link link" rel="noopener noindex nofollow">
+                                        <svg class="contacts__icon">
+                                            <use href="./images/barbicons.svg#icon-map-pin"></use>
+                                        </svg>
+                                        ул. Васильковая, 7А Киев, 08132
+                                    </a>
+                                </li>
+                                <li class="contacts__item">
+                                    <a href="tel:+380441111111" class="contacts__link link">
+                                        <svg class="contacts__icon">
+                                            <use href="./images/barbicons.svg#icon-phone"></use>
+                                        </svg>
+                                        +38 044 111 11 11
+                                    </a>
+                                </li>
+                                <li class="contacts__item">
+                                    <a href="mailto:barbershop@email.com" class="contacts__link--underline contacts__link link">
+                                        <svg class="contacts__icon">
+                                            <use href="./images/barbicons.svg#icon-mail"></use>
+                                        </svg>
+                                        barbershop@email.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <div class="contacts__text-box">
+                            <p class="contacts__top-text top-text">время работы</p>
+                            <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
@@ -350,6 +381,6 @@
             </ul>
         </div>
     </footer>
-    
+    <script src="./js/menu.js"></script>
 </body>
 </html>
