@@ -84,8 +84,40 @@
         <section class="about section" id="about-us">
             <div class="container about__box">
                 <ul class="about__list list">
-                    <li class="about__item"><img src="./images/img1about.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
-                    <li class="about__item"><img src="./images/img2about.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
+                    <li class="about__item">
+                        <picture>
+                            <source 
+                                srcset="./images/about/img1about-tab1x.jpg 330w,
+                                ./images/about/img1about-tab2x.jpg 660w" 
+                                media="(max-width: 1199px)"
+                                sizes="(min-width: 768px) 330px, 100vw">
+                            <source
+                                srcset="./images/about/img1about-desk1x.jpg 270w,
+                                ./images/about/img1about-desk2x.jpg 540w" 
+                                media="(min-width: 1200px)"
+                                sizes="(min-width: 1200px) 270px, 100vw">
+                            <img src="./images/img1about-desk2x.jpg" 
+                                alt="барбер стрижет клиента" 
+                                class="image">
+                        </picture>
+                    </li>
+                    <li class="about__item">
+                        <picture>
+                            <source 
+                                srcset="./images/about/img2about-tab1x.jpg 330w,
+                                ./images/about/img2about-tab2x.jpg 660w" 
+                                media="(max-width: 1199px)"
+                                sizes="(min-width: 768px) 330px, 100vw">
+                            <source
+                                srcset="./images/about/img2about-desk1x.jpg 270w,
+                                ./images/about/img2about-desk2x.jpg 540w" 
+                                media="(min-width: 1200px)"
+                                sizes="(min-width: 1200px) 270px, 100vw">
+                            <img src="./images/about/img2about-desk2x.jpg" 
+                                alt="барбер стрижет клиента" 
+                                class="image">
+                        </picture>
+                    </li>
                 </ul>
                 <div class="about__description">
                     <p class="about__top-text top-text">О НАС</p>
@@ -187,7 +219,26 @@
             <h2 class="masters__title title">Наши мастера</h2>
             <ul class="masters__list list">
                 <li class="masters__item">
-                    <img src="./images/img1master.jpg" alt="барбер стрижет клиента" width="370" class="image">
+                    <picture>
+                        <source 
+                            srcset="./images/masters/img1master-mob1x.jpg 418w,
+                            ./images/masters/img1master-mob2x.jpg 836w" 
+                            media="(max-width: 767px)"
+                            sizes="(min-width: 480px) 418px, 100vw">
+                        <source 
+                            srcset="./images/masters/img1master-tab1x.jpg 450w,
+                            ./images/masters/img1master-tab2x.jpg 900w" 
+                            media="(max-width: 1199px)"
+                            sizes="(min-width: 768px) 450px, 100vw">
+                        <source
+                            srcset="./images/masters/img1master-desk1x.jpg 370w,
+                            ./images/masters/img1master-desk2x.jpg 740w" 
+                            media="(min-width: 1200px)"
+                            sizes="(min-width: 1200px) 370px, 100vw">
+                        <img src="./images/masters/img1master-desk2x.jpg" 
+                            alt="барбер стрижет клиента" 
+                            class="image">
+                    </picture>
                     <h3 class="masters__name" lang="en">John Smith</h3>
                     <p class="masters__position" lang="en">Extreme Barber</p>
                     <ul class="socials-list list">
@@ -222,7 +273,26 @@
                     </ul>
                 </li>
                 <li class="masters__item">
-                    <img src="./images/img2master.jpg" alt="барбер стрижет клиента" width="370" class="image">
+                    <picture>
+                        <source 
+                            srcset="./images/masters/img2master-mob1x.jpg 418w,
+                            ./images/masters/img2master-mob2x.jpg 836w" 
+                            media="(max-width: 767px)"
+                            sizes="(min-width: 480px) 418px, 100vw">
+                        <source 
+                            srcset="./images/masters/img2master-tab1x.jpg 450w,
+                            ./images/masters/img2master-tab2x.jpg 900w" 
+                            media="(max-width: 1199px)"
+                            sizes="(min-width: 768px) 450px, 100vw">
+                        <source
+                            srcset="./images/masters/img2master-desk1x.jpg 370w,
+                            ./images/masters/img2master-desk2x.jpg 740w" 
+                            media="(min-width: 1200px)"
+                            sizes="(min-width: 1200px) 370px, 100vw">
+                        <img src="./images/masters/img2master-desk2x.jpg" 
+                            alt="барбер стрижет клиента" 
+                            class="image">
+                    </picture>
                     <h3 class="masters__name" lang="en">Michele Doe</h3>
                     <p class="masters__position" lang="en">Extreme Barber</p>
                     <ul class="socials-list list">
@@ -257,7 +327,26 @@
                     </ul>
                 </li>
                 <li class="masters__item">
-                    <img src="./images/img3master.jpg" alt="барбер стрижет клиента" width="370" class="image">
+                    <picture>
+                        <source 
+                            srcset="./images/masters/img3master-mob1x.jpg 418w,
+                            ./images/masters/img3master-mob2x.jpg 836w" 
+                            media="(max-width: 767px)"
+                            sizes="(min-width: 480px) 418px, 100vw">
+                        <source 
+                            srcset="./images/masters/img3master-tab1x.jpg 450w,
+                            ./images/masters/img3master-tab2x.jpg 900w" 
+                            media="(max-width: 1199px)"
+                            sizes="(min-width: 768px) 450px, 100vw">
+                        <source
+                            srcset="./images/masters/img3master-desk1x.jpg 370w,
+                            ./images/masters/img3master-desk2x.jpg 740w" 
+                            media="(min-width: 1200px)"
+                            sizes="(min-width: 1200px) 370px, 100vw">
+                        <img src="./images/masters/img3master-desk2x.jpg" 
+                            alt="барбер стрижет клиента" 
+                            class="image">
+                    </picture>
                     <h3 class="masters__name" lang="en">Alan Black</h3>
                     <p class="masters__position" lang="en">Extreme Barber</p>
                     <ul class="socials-list list">
@@ -300,10 +389,70 @@
                 <p class="portfolio__top-text top-text">На латинском языке “барба” означает “борода”</p>
             <h2 class="visually-hidden">Галерея</h2>
             <ul class="portfolio__list list">
-                <li class="portfolio__item"><img src="./images/portfolio1.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
-                <li class="portfolio__item"><img src="./images/portfolio2.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
-                <li class="portfolio__item"><img src="./images/portfolio3.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
-                <li class="portfolio__item"><img src="./images/portfolio4.jpg" alt="барбер стрижет клиента" width="270" class="image"></li>
+                <li class="portfolio__item">
+                    <img 
+                        srcset="
+                            ./images/portfolio/portfolio1-mob1x.jpg 418w,
+                            ./images/portfolio/portfolio1-tab1x.jpg 330w,
+                            ./images/portfolio/portfolio1-desk1x.jpg 270w,
+                            ./images/portfolio/portfolio1-mob2x.jpg 836w,
+                            ./images/portfolio/portfolio1-tab2x.jpg 660w,
+                            ./images/portfolio/portfolio1-desk2x.jpg 540w
+                        "
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (max-width: 480px) 418px, 100vw" 
+                        src="./images/portfolio/portfolio1-mob1x.jpg" 
+                        alt="барбер стрижет клиента"
+                        class="image"
+                    >
+                </li>
+                <li class="portfolio__item">
+                    <img 
+                        srcset="
+                            ./images/portfolio/portfolio2-mob1x.jpg 418w,
+                            ./images/portfolio/portfolio2-tab1x.jpg 330w,
+                            ./images/portfolio/portfolio2-desk1x.jpg 270w,
+                            ./images/portfolio/portfolio2-mob2x.jpg 836w,
+                            ./images/portfolio/portfolio2-tab2x.jpg 660w,
+                            ./images/portfolio/portfolio2-desk2x.jpg 540w
+                        "
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (max-width: 480px) 418px, 100vw" 
+                        src="./images/portfolio/portfolio2-mob1x.jpg" 
+                        alt="барбер стрижет клиента"
+                        class="image"
+                    >
+                </li>
+                <li class="portfolio__item">
+                    <img 
+                        srcset="
+                            ./images/portfolio/portfolio3-mob1x.jpg 418w,
+                            ./images/portfolio/portfolio3-tab1x.jpg 330w,
+                            ./images/portfolio/portfolio3-desk1x.jpg 270w,
+                            ./images/portfolio/portfolio3-mob2x.jpg 836w,
+                            ./images/portfolio/portfolio3-tab2x.jpg 660w,
+                            ./images/portfolio/portfolio3-desk2x.jpg 540w
+                        "
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (max-width: 480px) 418px, 100vw" 
+                        src="./images/portfolio/portfolio3-mob1x.jpg" 
+                        alt="барбер стрижет клиента"
+                        class="image"
+                    >
+                </li>
+                <li class="portfolio__item">
+                    <img 
+                        srcset="
+                            ./images/portfolio/portfolio4-mob1x.jpg 418w,
+                            ./images/portfolio/portfolio4-tab1x.jpg 330w,
+                            ./images/portfolio/portfolio4-desk1x.jpg 270w,
+                            ./images/portfolio/portfolio4-mob2x.jpg 836w,
+                            ./images/portfolio/portfolio4-tab2x.jpg 660w,
+                            ./images/portfolio/portfolio4-desk2x.jpg 540w
+                        "
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (max-width: 480px) 418px, 100vw" 
+                        src="./images/portfolio/portfolio4-mob1x.jpg" 
+                        alt="барбер стрижет клиента"
+                        class="image"
+                    >
+                </li>
             </ul>
             </div>
         </section>

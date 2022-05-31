@@ -2,24 +2,39 @@
     max-width: 100%;
     margin: 0 auto;
     background-color: var(--second-bg-color);
-    background-image: url(../images/contactsBg.png);
+    background-image: url(../images/contacts/contactsBg-mob1x.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 480px 496px;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contactsBg-mob2x.png); 
+    }
     
     @include mobile {
         max-width: 480px;
     }
       @include tablet {
         max-width: 768px;
-        background-image: url(../images/contactsBg.png);
+        background-image: url(../images/contacts/contactsBg-tab1x.png);
         background-size: 768px 449px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contactsBg-tab2x.png); 
+        }
     }
       @include desktop {
         max-width: 1280px;
-        background-image: url(../images/contactsBg.png);
+        background-image: url(../images/contacts/contactsBg.png);
         background-position: right;
         background-size: calc(50% - 15px);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contactsBg-desc2x.png); 
+        }
     }
     &__box {
         @include desktop {

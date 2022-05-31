@@ -464,8 +464,14 @@ p {
 @media screen and (max-width: 767px) {
   .hero {
     background-color: #111319;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/SliderImg3.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg-mob1x.jpg);
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg-mob2x.jpg);
   }
 }
 
@@ -504,14 +510,27 @@ p {
   .hero__content {
     padding: 280px 0 234px 70px;
     background-color: #111319;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/SliderImg3.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg-tab1x.jpg);
     background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__content {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg-tab2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__content {
     padding: 272px 0 206px 96px;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg3.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__content {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/call/SliderImg-desc2x.jpg);
   }
 }
 
@@ -687,10 +706,16 @@ p {
 .prices {
   margin: 0 auto;
   background-color: #111319;
-  background-image: url(../images/pricesBg.png);
+  background-image: url(../images/prices/pricesBgmob1x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices/pricesBgmob2x.png);
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -702,12 +727,26 @@ p {
 @media screen and (min-width: 768px) {
   .prices {
     max-width: 768px;
+    background-image: url(../images/prices/pricesBgtab1x.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices/pricesBgtab2x.png);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .prices {
     max-width: 1280px;
+    background-image: url(../images/prices/pricesBg.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices/pricesBgdesc2x.png);
   }
 }
 
@@ -1079,10 +1118,16 @@ p {
   max-width: 100%;
   margin: 0 auto;
   background-color: var(--second-bg-color);
-  background-image: url(../images/contactsBg.png);
+  background-image: url(../images/contacts/contactsBg-mob1x.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 480px 496px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .prefooter {
+    background-image: url(../images/contacts/contactsBg-mob2x.png);
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1094,17 +1139,29 @@ p {
 @media screen and (min-width: 768px) {
   .prefooter {
     max-width: 768px;
-    background-image: url(../images/contactsBg.png);
+    background-image: url(../images/contacts/contactsBg-tab1x.png);
     background-size: 768px 449px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .prefooter {
+    background-image: url(../images/contacts/contactsBg-tab2x.png);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .prefooter {
     max-width: 1280px;
-    background-image: url(../images/contactsBg.png);
+    background-image: url(../images/contacts/contactsBg.png);
     background-position: right;
     background-size: calc(50% - 15px);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .prefooter {
+    background-image: url(../images/contacts/contactsBg-desc2x.png);
   }
 }
 
